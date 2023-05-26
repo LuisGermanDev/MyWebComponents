@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de productos</title>
+  <link rel="stylesheet" href="estilos.css">
+  
+</head>
+<body>
+  <h1>Galería de productos</h1>
+  <div id="product-gallery" class="product-gallery"></div>
+
+  <script>
+    // Datos de productos en formato JSON
+    const products = [
+      {
+        "title": "Tetera",
+        "description": "Descripción del producto 1",
+        "price": "$10",
+        "image": "product1.jpg"
+      },
+      {
+        "title": "Molcajete",
+        "description": "Descripción del producto 2",
+        "price": "$15",
+        "image": "product2.jpg"
+      },
+      {
+        "title": "Sarten",
+        "description": "Descripción del producto 3",
+        "price": "$20",
+        "image": "product2.jpg"
+      },
+      // Agrega los demás productos aquí
+    ];
+
+    const productGallery = document.getElementById('product-gallery');
+
+    // Recorrer los datos y crear las tarjetas de producto dinámicamente
+    for (const product of products) {
+      const productCard = document.createElement('product-card');//comp.web nativo
+      productCard.setAttribute('title', product.title);
+      productCard.setAttribute('description', product.description);
+      productCard.setAttribute('price', product.price);
+      productCard.setAttribute('image', product.image);
+      productGallery.appendChild(productCard);
+    }
+  </script>
+  <script src="ProductCard.js"></script>
+</body>
+</html>
