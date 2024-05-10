@@ -51,6 +51,7 @@ class ProductCard extends HTMLElement{
         counterElement.textContent = `Cantidad: ${count}`;
         cardContainer.appendChild(counterElement);
 
+        
         addToCartButton.addEventListener('click',() =>{
             count++;
             counterElement.textContent = `Cantidad: ${count}`;

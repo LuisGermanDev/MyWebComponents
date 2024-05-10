@@ -1,8 +1,8 @@
 .product-card {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* padding: 20px; */
+    width: 250px;
     text-align: center;
   }
   
@@ -36,11 +36,27 @@
   }
 
   img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    /* height: 50%; */
   }
 
-  product-card {
-    background-color: #0056b3;
+ product-card {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
+  .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
